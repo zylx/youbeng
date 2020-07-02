@@ -1,9 +1,9 @@
-const Dev = () => import( /* webpackChunkName: "pages" */ '../pages/Dev.vue')
-const DevSettings = () => import( /* webpackChunkName: "pages" */ '../pages/DevSettings.vue')
-const DevStatus = () => import( /* webpackChunkName: "pages" */ '../pages/DevStatus.vue')
-const AlarmConfig = () => import( /* webpackChunkName: "pages" */ '../pages/AlarmConfig.vue')
-const HistoryEvents = () => import( /* webpackChunkName: "pages" */ '../pages/HistoryEvents.vue')
-const Login = () => import( /* webpackChunkName: "pages" */ '../pages/Login.vue')
+const Dev = () => import( /* webpackChunkName: "pages" */ '@/pages/Dev.vue')
+const DevSettings = () => import( /* webpackChunkName: "pages" */ '@/pages/DevSettings.vue')
+const DevStatus = () => import( /* webpackChunkName: "pages" */ '@/pages/DevStatus.vue')
+const AlarmConfig = () => import( /* webpackChunkName: "pages" */ '@/pages/AlarmConfig.vue')
+const HistoryEvents = () => import( /* webpackChunkName: "pages" */ '@/pages/HistoryEvents.vue')
+const Login = () => import( /* webpackChunkName: "pages" */ '@/pages/Login.vue')
 
 export default [{
         path: '/',
