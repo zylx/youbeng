@@ -1,19 +1,12 @@
 <template>
-    <div>
-        <h1>{{ message }}</h1>
-    </div>
+  <div>
+    <router-view />
+  </div>
 </template>
 
 <script>
 
 export default {
-    name: "App",
-	data: {
-		return {
-			message: 'Hello Vue!'
-		}
-	}
+  name: "App"
 };
-
 </script>
-

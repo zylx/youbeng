@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: {
-        main: './src/index.js'
+        main: './src/main.js'
     },
     output: {
         filename: 'js/[name].[hash:8].js',
@@ -34,8 +34,22 @@ module.exports = {
                         }
                     },
                     'css-loader',
-                    'stylus-loader',
+                    // 'stylus-loader',
                     'postcss-loader'
+                ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    isDev ? 'vue-style-loader' : {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
+                    },
+                    'css-loader',
+                    'postcss-loader',
+                    'less-loader'
                 ]
             },
             {
@@ -54,7 +68,11 @@ module.exports = {
             {
                 //字体解析
                 test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-                loader: 'file-loader'
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[hash:8].[ext]',
+                    outputPath: 'media'
+                }
             },
             {
                 //解析 html中的图片资源
