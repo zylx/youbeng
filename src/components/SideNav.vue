@@ -16,19 +16,19 @@
         <i :class="isCollapse ? 'el-icon-d-arrow-right' : 'el-icon-d-arrow-left'"></i>
         <span slot="title">{{ isCollapse ? "展开" : "收起" }}</span>
       </el-menu-item>
-      <el-menu-item index="/dev/settings">
+      <el-menu-item index="/settings">
         <i class="el-icon-setting"></i>
         <span slot="title">设备设置</span>
       </el-menu-item>
-      <el-menu-item index="/dev/status">
+      <el-menu-item index="/status">
         <i class="el-icon-data-line"></i>
         <span slot="title">设备状态</span>
       </el-menu-item>
-      <el-menu-item index="/dev/alarmConfig">
+      <el-menu-item index="/alarmConfig">
         <i class="el-icon-bell"></i>
         <span slot="title">告警配置</span>
       </el-menu-item>
-      <el-menu-item index="/dev/historyEvents">
+      <el-menu-item index="/historyEvents">
         <i class="el-icon-warning-outline"></i>
         <span slot="title">历史记录</span>
       </el-menu-item>

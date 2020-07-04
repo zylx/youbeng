@@ -7,10 +7,10 @@ const Login = () => import( /* webpackChunkName: "pages" */ '@/pages/Login.vue')
 
 export default [{
         path: '/',
-        redirect: '/dev/settings'
+        redirect: '/status'
     },
     {
-        path: '/dev',
+        path: '/',
         name: 'dev',
         component: Dev,
         // props: (route) => ({
