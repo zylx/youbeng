@@ -1,6 +1,4 @@
 import Vue from 'vue'
-// import axios from 'axios'
-// import VueAxios from 'vue-axios'
 import VueRouter from 'vue-router'
 import ElementUI from 'element-ui'
 import '@/css/reset.css'
@@ -32,7 +30,6 @@ Vue.component('chart', ECharts)
 
 Vue.use(VueRouter)
 Vue.use(ElementUI)
-// Vue.use(VueAxios, axios)
 
 const router = createRouter()
 
