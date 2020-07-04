@@ -15,10 +15,10 @@ module.exports = merge(webpackBaseConf, {
         overlay: {
             errors: true
         },
-        historyApiFallback: true,
-        // historyApiFallback: {
-        //     index: resolve(__dirname, '../index.html')
-        // },
+        // historyApiFallback: true,
+        historyApiFallback: {
+            index: resolve(__dirname, '../index.html')
+        },
         hot: true, //开启热点
         open: false, //自动打开浏览器
         progress: true, //显示打包的进度
