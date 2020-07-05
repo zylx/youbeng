@@ -1,18 +1,18 @@
-const Dev = () => import( /* webpackChunkName: "pages" */ '@/pages/Dev.vue')
-const DevSettings = () => import( /* webpackChunkName: "pages" */ '@/pages/DevSettings.vue')
-const DevStatus = () => import( /* webpackChunkName: "pages" */ '@/pages/DevStatus.vue')
-const AlarmConfig = () => import( /* webpackChunkName: "pages" */ '@/pages/AlarmConfig.vue')
-const HistoryEvents = () => import( /* webpackChunkName: "pages" */ '@/pages/HistoryEvents.vue')
-const Login = () => import( /* webpackChunkName: "pages" */ '@/pages/Login.vue')
+const Main = () => import( /* webpackChunkName: "index" */ '@/components/Main.vue')
+const DevSettings = () => import( /* webpackChunkName: "devSettings" */ '@/pages/DevSettings.vue')
+const DevStatus = () => import( /* webpackChunkName: "devStatus" */ '@/pages/DevStatus.vue')
+const AlarmConfig = () => import( /* webpackChunkName: "alarmConfig" */ '@/pages/AlarmConfig.vue')
+const HistoryEvents = () => import( /* webpackChunkName: "historyEvents" */ '@/pages/HistoryEvents.vue')
+const Login = () => import( /* webpackChunkName: "login" */ '@/pages/Login.vue')
 
 export default [{
         path: '/',
-        redirect: '/status'
+        redirect: '/dev/status'
     },
     {
-        path: '/',
+        path: '/dev',
         name: 'dev',
-        component: Dev,
+        component: Main,
         // props: (route) => ({
         //     a: route.query.a,
         //     b: route.query.b
@@ -29,10 +29,13 @@ export default [{
             path: 'alarmConfig',
             name: 'alarmConfig',
             component: AlarmConfig
-        }, {
+        },{
             path: 'historyEvents',
             name: 'historyEvents',
             component: HistoryEvents
+        },{
+            path: '',
+            redirect: 'status'
         }]
     },
     {
