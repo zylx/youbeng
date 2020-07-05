@@ -34,6 +34,7 @@ Vue.use(ElementUI)
 const router = createRouter()
 
 // router.beforeEach((to, from, next) => {
+// console.log("from", from)
 // console.log("to", to)
 //     //NProgress.start();
 //     if (to.path === '/login') {
