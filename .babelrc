@@ -1,9 +1,15 @@
 {
     "presets": [
         [
-            "@babel/env",
+            "@babel/preset-env",
             {
                 "modules": false,
+                //按需加载
+                "useBuiltIns": "usage",
+                //指定core-js版本
+                "corejs": {
+                    "version": 3
+                },
                 "targets": {
                     "browsers": [
                         "> 1%",
@@ -16,7 +22,13 @@
     ],
     "plugins": [
         // 配置使之支持 async...await... 语法
-        "@babel/plugin-transform-regenerator",
-        "@babel/plugin-transform-runtime"
+        // "@babel/plugin-transform-regenerator",
+        // "@babel/plugin-transform-runtime"
+        // [
+        //     "@babel/plugin-transform-runtime",
+        //     {
+        //         "corejs": 3
+        //     }
+        // ]
     ]
 }
