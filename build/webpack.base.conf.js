@@ -12,7 +12,7 @@ module.exports = {
     output: {
         filename: 'js/[name].[hash:8].js',
         path: resolve(__dirname, '../dist'),
-        // pubilcPath: '/dev/'
+        publicPath: '/dev/'
     },
     module: {
         rules: [{
@@ -66,7 +66,7 @@ module.exports = {
                 }]
             },
             {
-                //字体解析
+                //字体和其他文件解析
                 test: /\.(eot|ttf|woff|woff2)(\?\S*)?$/,
                 loader: 'file-loader',
                 options: {
@@ -97,7 +97,7 @@ module.exports = {
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[hash:8].css',
-            chunkFilename: 'css/[id].[hash:8].css'
+            // chunkFilename: 'css/[id].[hash:8].css'
         })
     ],
     resolve: {
