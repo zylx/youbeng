@@ -4,6 +4,7 @@ const isDev = process.env.NODE_ENV === 'development'; // 开发 or 生产
 
 // 匹配接口前缀
 export function autoMatch(prefix) {
+  console.log("autoMatch -> prefix", prefix)
   let baseUrl = '';
   if (isDev) {
     // 开发环境 通过proxy配置转发请求；
@@ -19,7 +20,7 @@ export function autoMatch(prefix) {
         baseUrl = window.LOCAL_CONFIG.alipay;
         break;
       default:
-        baseUrl = window.LOCAL_CONFIG.default;
+        baseUrl = '../youbeng';
     }
   }
   return baseUrl;
