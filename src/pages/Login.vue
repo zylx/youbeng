@@ -100,9 +100,9 @@ export default {
                                         sessionStorage.setItem("user", self.userForm.user);
                                         sessionStorage.setItem("tk", res.token);
                                         // self.$router.push({
-                                        //     path: "/",
+                                        //     path: "/main/status",
                                         // });
-                                        window.location.href = '/';
+                                        window.location.href = '/dev/status';
                                     },
                                 });
                             } else {
