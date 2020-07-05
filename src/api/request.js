@@ -65,11 +65,11 @@ instance.interceptors.response.use(response => {
 
   // 对响应数据做处理
   const { error_code, error_msg } = response.data || {};
-  if (error_code === 4007) { // token 过期
+  if ([4006, 4007].includes(error_code)) { // 4006: token无效，4007: token过期
     const instance = Message.error(error_msg);
     setTimeout(() => {
       instance.close();
-      window.location.href = '/login';
+      // window.location.href = '/login';
     }, 3000)
   }
 
