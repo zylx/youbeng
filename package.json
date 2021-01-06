@@ -41,7 +41,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cross-env": "^7.0.2",
     "echarts": "^4.8.0",
     "element-ui": "^2.13.2",
